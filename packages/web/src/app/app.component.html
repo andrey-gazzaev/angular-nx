@@ -1,0 +1,5 @@
+<h1>{{ title }}</h1>
+<ng-container *ngIf="testModelNames$ | async as testModelNames">
+
+    <app-test-component [testModelNames]="testModelNames"></app-test-component>
+</ng-container>
