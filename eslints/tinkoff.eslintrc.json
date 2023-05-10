@@ -1,0 +1,36 @@
+{
+    "extends": [
+        "@tinkoff/eslint-config-angular",
+        "@tinkoff/eslint-config-angular/rxjs",
+        "@tinkoff/eslint-config-angular/promise",
+        "@tinkoff/eslint-config-angular/imports",
+        "@tinkoff/eslint-config-angular/html-eslint",
+        "@tinkoff/eslint-config-angular/file-progress",
+        "@tinkoff/eslint-config-angular/line-statements",
+        "@tinkoff/eslint-config-angular/member-ordering",
+        "@tinkoff/eslint-config-angular/decorator-position",
+        "@tinkoff/eslint-config-angular/function-return-type"
+    ],
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [
+                ".ts",
+                ".tsx"
+            ]
+        },
+        "import/resolver": {
+            "typescript": {
+                "project": [
+                    "tsconfig.*?.json",
+                    "package/*/tsconfig.*?.json"
+                ]
+            },
+            "node": {
+                "project": [
+                    "tsconfig.*?.json",
+                    "package/*/tsconfig.*?.json"
+                ]
+            }
+        }
+    }
+}
