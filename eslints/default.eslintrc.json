@@ -1,0 +1,78 @@
+{
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "rules": {
+        "@html-eslint/indent": ["error", 2]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "warn",
+          {
+            "selector": "default",
+            "format": ["camelCase"],
+            "leadingUnderscore": "allow",
+            "trailingUnderscore": "allow"
+          },
+          {
+            "selector": "variable",
+            "format": ["camelCase", "UPPER_CASE"],
+            "leadingUnderscore": "allow",
+            "trailingUnderscore": "allow"
+          },
+          {
+            "selector": "typeLike",
+            "format": ["PascalCase"]
+          },
+          {
+            "selector": "enumMember",
+            "format": ["PascalCase"]
+          }
+        ],
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.dto.ts", "*.mapper.ts"],
+      "rules": {
+        "no-restricted-syntax": [
+          "error",
+          {
+            "selector": "TSPropertySignature[readonly=undefined]",
+            "message": "Missing 'readonly' modifier for the DTO property."
+          },
+          {
+            "selector": "TSPropertySignature TSTypeAnnotation[typeAnnotation.type='TSArrayType']",
+            "message": "Missing 'readonly' type modifier for array."
+          }
+        ],
+        "@typescript-eslint/naming-convention": "off"
+      }
+    },
+    {
+      "files": ["*.spec.ts"],
+      "rules": {
+        "max-lines-per-function": "off",
+        "@typescript-eslint/naming-convention": "off",
+        "@angular-eslint/use-component-selector": "off",
+        "jsdoc/require-jsdoc": "off",
+        "@typescript-eslint/explicit-function-return-type": "off"
+      }
+    }
+  ]
+}
