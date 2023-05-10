@@ -1,10 +1,10 @@
-/* eslint-disable */
 export default {
   displayName: 'common',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../coverage/packages/common',
   transform: {
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
       {

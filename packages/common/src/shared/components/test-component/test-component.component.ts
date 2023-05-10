@@ -6,7 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./test-component.component.css'],
 })
 export class TestComponentComponent {
-
   @Input()
-  public testModelNames: readonly string[] | undefined
+  testModelNames: readonly string[] | undefined;
 }
