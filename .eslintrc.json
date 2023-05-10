@@ -1,24 +1,14 @@
 {
   "root": true,
-  "ignorePatterns": ["**/*"],
   "plugins": ["@nx"],
+  "extends":[
+    "./eslints/default.eslintrc.json"
+  ],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {
-        "@nx/enforce-module-boundaries": [
-          "error",
-          {
-            "enforceBuildableLibDependency": true,
-            "allow": [],
-            "depConstraints": [
-              {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
-              }
-            ]
-          }
-        ]
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["./tsconfig.base.json"]
       }
     },
     {
