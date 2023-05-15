@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class TestComponentComponent {
   @Input()
-  testModelNames: readonly string[] | undefined;
+  public testModelNames: readonly string[] | undefined;
 }

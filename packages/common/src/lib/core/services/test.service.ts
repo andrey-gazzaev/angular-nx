@@ -9,9 +9,9 @@ import { TestMapper } from './mappers/test.mapper';
   providedIn: 'root',
 })
 export class TestService {
-  constructor(private readonly testMapper: TestMapper) {}
+  public constructor(private readonly testMapper: TestMapper) {}
 
-  getList(): Observable<Test[]> {
+  public getList(): Observable<Test[]> {
     const testDtoList: TestDto[] = [
       {
         // eslint-disable-next-line @typescript-eslint/naming-convention

@@ -7,7 +7,7 @@ import { TestDto } from './dtos/test.dto';
   providedIn: 'root',
 })
 export class TestMapper {
-  fromDto(dto: TestDto): Test {
+  public fromDto(dto: TestDto): Test {
     return {
       nameModel: dto.name_model,
     };

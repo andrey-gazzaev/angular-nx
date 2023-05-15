@@ -1,9 +1,8 @@
 {
   "root": true,
   "plugins": ["@nx"],
-  "extends":[
-    "./eslints/default.eslintrc.json"
-  ],
+  "extends": ["./eslints/default.eslintrc.json"],
+  "ignorePatterns": ["src/test-setup.ts", "jest.config.ts"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
@@ -27,6 +26,26 @@
         "jest": true
       },
       "rules": {}
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          {
+            "accessibility": "explicit",
+            "overrides": {
+              "parameterProperties": "no-public"
+            }
+          }
+        ],
+        "@typescript-eslint/array-type": [
+          "error",
+          {
+            "default": "array"
+          }
+        ]
+      }
     }
   ]
 }

@@ -12,9 +12,9 @@ export class AppComponent {
   protected readonly testModelNames$: Observable<string[]>;
 
   @Input()
-  title = 'web';
+  public title = 'web';
 
-  constructor(readonly testService: TestService) {
+  public constructor(readonly testService: TestService) {
     this.testModelNames$ = testService
       .getList()
       .pipe(map((test) => test.map(({ nameModel }) => nameModel)));
