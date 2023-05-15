@@ -4,7 +4,6 @@
     "../../eslints/tinkoff.eslintrc.json",
     "../../.eslintrc.json"
   ],
-  
   "overrides": [
     {
       "files": ["*.ts"],

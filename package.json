@@ -5,6 +5,7 @@
   "scripts": {
     "start:web": "nx serve web",
     "build:web": "nx build web",
+    "prettier:w": "prettier --write .",
     "lint": "npm run lint:web && npm run lint:common",
     "lint:web": "nx lint web --fix",
     "lint:common": "nx lint common --fix"
