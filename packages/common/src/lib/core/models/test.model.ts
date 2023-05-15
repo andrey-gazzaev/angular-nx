@@ -1,3 +1,3 @@
 export interface Test {
-    readonly nameModel: string;
-} 
+  readonly nameModel: string;
+}

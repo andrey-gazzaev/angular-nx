@@ -1,6 +1,9 @@
 {
-  "extends": ["../../.eslintrc.json"],
-  "ignorePatterns": ["!**/*"],
+  "extends": [
+    "@tinkoff/eslint-config/lib",
+    "../../eslints/tinkoff.eslintrc.json",
+    "../../.eslintrc.json"
+  ],
   "overrides": [
     {
       "files": ["*.ts"],
@@ -26,11 +29,6 @@
         "plugin:@nx/angular",
         "plugin:@angular-eslint/template/process-inline-templates"
       ]
-    },
-    {
-      "files": ["*.html"],
-      "extends": ["plugin:@nx/angular-template"],
-      "rules": {}
     }
   ]
 }
